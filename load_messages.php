@@ -18,7 +18,7 @@ foreach($updatesarray as $data)
         });
     });
     </script>
-    <div class="panel panel-default panel-google-plus">
+    <div class="panel panel-default panel-google-plus" id="stbody<?php echo $msg_id;?>">
         <?
         if ($userprofile['uid'] == $uid) 
         {

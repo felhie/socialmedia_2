@@ -21,7 +21,7 @@ if($data)
 	$face= $data['foto_profil'];
 
 ?>
-    <div class="panel panel-default panel-google-plus">
+    <div class="panel panel-default panel-google-plus" id="stbody<?php echo $msg_id;?>">
         <div class="dropdown">
             <span class="pull-right">
                         <a class="stdelete" href="#" id="<?php echo $msg_id;?>" title="Hapus Update">X</a>

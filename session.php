@@ -1,3 +1,4 @@
  <?php
-$uid=1; // User Session ID
+session_start();
+$uid= $_SESSION['uid'];; // User Session ID
 ?>

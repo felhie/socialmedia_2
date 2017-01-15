@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(0);
 include_once 'includes/db.php';
 include_once 'includes/functions.php';
@@ -38,6 +39,13 @@ $updatesarray=$Wall->getWallPost();
         <div style="width:100%;min-width:600px;overflow:hidden">
             <div id="wall_container" style="margin:0 auto;">
                 <!-- Update Box -->
+                <?
+                echo("<pre>");
+                var_dump($_SESSION);
+                echo("</pre>");
+                ?>
+                <span><a href="user.php?id=<?=$userprofile['uid']?>">Profile</a></span>
+                <span><a href="logout.php">Logout</a></span>
                 <div class="well">
                     <form class="form-horizontal" role="form" method="post" action="">
                         <h4>What's New</h4>
