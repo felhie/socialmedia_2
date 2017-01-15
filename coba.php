@@ -38,7 +38,51 @@ $updatesarray=$Wall->getWallPost();
             <div class="container">
                 <div class="row">
                     <!-- CONTENT KIRI -->
-                    <div class="col-md-3">a</div>
+                    <div class="col-md-3">
+                        <div class="profile-sidebar">
+                            <!-- SIDEBAR USERPIC -->
+                            <div class="profile-userpic">
+                                <img src="<?=$userprofile['foto_profil']?>" class="img-responsive img-circle" alt="">
+                            </div>
+                            <!-- END SIDEBAR USERPIC -->
+                            <!-- SIDEBAR USER TITLE -->
+                            <div class="profile-usertitle">
+                                <div class="profile-usertitle-name text-center">
+                                    <span><?=$userprofile['nama_depan']." ".$userprofile['nama_belakang']?></span>
+                                </div>
+                                <div class="profile-usertitle-job">
+                                </div>
+                            </div>
+                            <!-- END SIDEBAR USER TITLE -->
+                            <!-- SIDEBAR MENU -->
+                            <div class="profile-usermenu">
+                                <ul class="nav">
+			                        <li>
+			                            <a href="#">
+			                            <i class="glyphicon glyphicon-user"></i>
+			                            <span class="hidden-xs">Profile<span> </a>
+			                        </li>
+			                        <!-- <li>
+			                            <a href="#">
+			                            <i class="glyphicon glyphicon-ok"></i>
+			                            <span class="hidden-xs">Orders <span></a>
+			                        </li>
+			                        <li>
+			                            <a href="#">
+			                            <i class="glyphicon glyphicon-flag"></i>
+			                            <span class="hidden-xs">My Wishlist <span></a>
+			                        </li>
+			                            <li>
+			                            <a href="#">
+			                            <i class="glyphicon glyphicon-shopping-cart"></i>
+			                            <span class="hidden-xs">Shopping Bag<span> </a>
+			                            
+			                        </li> -->
+			                        
+			                    </ul>
+			                </div>
+			            </div>
+                    </div>
                     <!-- CONTENT TENGAH -->
                     <div class="col-md-6">
                         <!-- Update Box -->
@@ -48,81 +92,84 @@ $updatesarray=$Wall->getWallPost();
 		                echo("</pre>");
 		                ?>
                             <span><a href="user.php?id=<?=$userprofile['uid']?>">Profile</a></span>
-                            <span><a href="logout.php">Logout</a></span>
-                            <div class="well">
-                                <form class="form-horizontal" role="form" method="post" action="">
-                                    <h4>What's New</h4>
-                                    <div class="form-group" style="padding:14px;">
-                                        <textarea class="form-control" placeholder="Update your status" name="update" id="update"></textarea>
-                                        <button class="btn btn-success pull-right update_button" type="submit" style="margin-top:15px;" id="update_button">Post</button>
-                                    </div>
-                                </form>
+                                            <span><a href="logout.php">Logout</a></span>
+                                            <div class="well">
+                                                <form class="form-horizontal" role="form" method="post" action="">
+                                                    <h4>What's New</h4>
+                                                    <div class="form-group" style="padding:14px;">
+                                                        <textarea class="form-control" placeholder="Update your status" name="update" id="update"></textarea>
+                                                        <button class="btn btn-success pull-right update_button" type="submit" style="margin-top:15px;" id="update_button">Post</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- ./Update Box -->
+                                            <div id='flashmessage'>
+                                                <div id="flash" align="left"></div>
+                                            </div>
+                                            <!-- Content -->
+                                            <div id="content">
+                                                <?php include('load_messages.php'); ?>
+                                            </div>
+                                            <!-- ./Content -->
                             </div>
-                            <!-- ./Update Box -->
-                            <div id='flashmessage'>
-                                <div id="flash" align="left"></div>
-                            </div>
-                            <!-- Content -->
-                            <div id="content">
-                                <?php include('load_messages.php'); ?>
-                            </div>
-                            <!-- ./Content -->
-                    </div>
-                    <!-- CONTENT KANAN -->
-                    <div class="col-md-3">
-                        <div class="panel">
-                            <div class="panel-heading" style="background-color:#555;color:#eee;">New Stories</div>
-                            <div class="panel-body">
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object img-thumbnail img-story" src="img/1.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><a href="/tagged/modal" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Modal</strong></a></h5>
-                                        <small>Kami dari Fakultas Teknologi Info UAJ...</small>
-                                        <span class="badge"><span class="glyphicon glyphicon-comment"> 555</span></span>
+                            <!-- CONTENT KANAN -->
+                            <div class="col-md-3">
+                                <div class="panel">
+                                    <div class="panel-heading" style="background-color:#555;color:#eee;">New Stories</div>
+                                    <div class="panel-body">
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object img-thumbnail img-story" src="img/1.jpg">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="/tagged/modal" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Modal</strong></a></h5>
+                                                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </small>
+                                                <br>
+                                                <span class="badge"><span class="glyphicon glyphicon-comment"> 555</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="http://placehold.it/80/F0F0F0">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="/tagged/slider" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Carousel</strong></a></h5>
+                                                <small>How to use the Bootstrap slider.</small>
+                                                <br>
+                                                <span class="badge">322</span>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="http://placehold.it/80/F0F0F0">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="/tagged/typography" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Typography</strong></a></h5>
+                                                <small>See the various textual elements and options.</small>
+                                                <br>
+                                                <span class="badge">44</span>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="http://placehold.it/80/F0F0F0">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a href="/tagged/media" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>@Media</strong></a></h5>
+                                                <small>Use @media queries to get the layout you want.</small>
+                                                <br>
+                                                <span class="badge">119</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="http://placehold.it/80/F0F0F0">
-                                    </a>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><a href="/tagged/slider" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Carousel</strong></a></h5>
-                                        <small>How to use the Bootstrap slider.</small>
-                                        <br>
-                                        <span class="badge">322</span>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="http://placehold.it/80/F0F0F0">
-                                    </a>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><a href="/tagged/typography" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>Typography</strong></a></h5>
-                                        <small>See the various textual elements and options.</small>
-                                        <br>
-                                        <span class="badge">44</span>
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object" src="http://placehold.it/80/F0F0F0">
-                                    </a>
-                                    <div class="media-body">
-                                        <h5 class="media-heading"><a href="/tagged/media" target="ext" class="pull-right"><i class="glyphicon glyphicon-share"></i></a> <a href="#"><strong>@Media</strong></a></h5>
-                                        <small>Use @media queries to get the layout you want.</small>
-                                        <br>
-                                        <span class="badge">119</span>
-                                    </div>
-                                </div>
+                                <!--/panel-->
                             </div>
                         </div>
-                        <!--/panel-->
                     </div>
+                    <!-- container -->
                 </div>
-            </div>
-        </div>
+                <!-- ./section -->
     </body>
 
     </html>
